@@ -60,6 +60,7 @@
             mapBackground.innerHTML = '';
             
             plotPositions.forEach((position) => {
+                const lineBreak = document.createElement('br');
                 const plot = document.createElement('div');
                 plot.className = 'house-plot';
                 plot.textContent = position.plotNumber;
@@ -76,10 +77,11 @@
                     // Add photo of location
                     const plotImage = document.createElement('img');
                     plotImage.src = `images/${position.plotNumber}.jpg`;
-                    plotImage.style.height = '360px';
-                    plotImage.style.width = '640px'
+                    plotImage.style.height = '180px';
+                    plotImage.style.width = '320px'
                     tooltip.appendChild(plotImage);
-                    
+
+                    plot.appendChild(lineBreak);
                     plot.appendChild(tooltip);
                 } else {
                     // Add tooltip for available plot
@@ -90,16 +92,17 @@
                     // Add photo of location
                     const plotImage = document.createElement('img');
                     plotImage.src = `images/${position.plotNumber}.jpg`;
-                    plotImage.style.height = '360px';
-                    plotImage.style.width = '640px'
+                    plotImage.style.height = '180px';
+                    plotImage.style.width = '320px'
                     tooltip.appendChild(plotImage);
-                    
+
+                    plot.appendChild(lineBreak);
                     plot.appendChild(tooltip);
                 }
                 
                 // Position the plot
-                plot.style.left = position.x + 'px';
-                plot.style.top = position.y + 'px';
+                plot.style.left = (position.x + 180) + 'px';
+                plot.style.top = (position.y + 320) +'px';
                 
                 mapBackground.appendChild(plot);
             });

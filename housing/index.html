@@ -73,6 +73,8 @@
                     const tooltip = document.createElement('div');
                     tooltip.className = 'plot-info';
                     tooltip.textContent = `Plot ${position.plotNumber}: ${housingData[position.plotNumber]}`;
+                    tooltip.style.top = "250px";
+                    tooltip.style.left = "0px";
 
                     // Add photo of location
                     const plotImage = document.createElement('img');
@@ -88,6 +90,8 @@
                     const tooltip = document.createElement('div');
                     tooltip.className = 'plot-info';
                     tooltip.textContent = `Plot ${position.plotNumber}: Available`;
+                    tooltip.style.top = "250px";
+                    tooltip.style.left = "0px";
 
                     // Add photo of location
                     const plotImage = document.createElement('img');
@@ -101,8 +105,8 @@
                 }
                 
                 // Position the plot
-                plot.style.left = (position.x + 320) + 'px';
-                plot.style.top = (position.y + 320) + 'px';
+                plot.style.left = position.x + 'px';
+                plot.style.top = position.y + 'px';
                 
                 mapBackground.appendChild(plot);
             });

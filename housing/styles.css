@@ -21,7 +21,7 @@ body {
 }
 
 .map-background {
-    background-image: url('map.jpg');
+    background-image: url('images/labeled-map.jpg');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;

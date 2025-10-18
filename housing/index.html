@@ -88,10 +88,12 @@
                     tooltip.textContent = `Plot ${position.plotNumber}: Available`;
 
                     // Add photo of location
+                    const plotImage = document.createElement('img');
                     plotImage.src = `images/${postion.plotNumber}.jpg`;
                     plotImage.style.height = '360px';
                     plotImage.style.width = '640px'
                     tooltip.appendChild(plotImage);
+                    
                     plot.appendChild(tooltip);
                 }
                 

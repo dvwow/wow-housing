@@ -79,9 +79,9 @@
                     plotImage.src = `images/${position.plotNumber}.jpg`;
                     plotImage.style.height = '180px';
                     plotImage.style.width = '320px'
+                    tooltip.appendChild(lineBreak);
                     tooltip.appendChild(plotImage);
 
-                    plot.appendChild(lineBreak);
                     plot.appendChild(tooltip);
                 } else {
                     // Add tooltip for available plot
@@ -94,15 +94,15 @@
                     plotImage.src = `images/${position.plotNumber}.jpg`;
                     plotImage.style.height = '180px';
                     plotImage.style.width = '320px'
+                    tooltip.appendChild(lineBreak);
                     tooltip.appendChild(plotImage);
 
-                    plot.appendChild(lineBreak);
                     plot.appendChild(tooltip);
                 }
                 
                 // Position the plot
-                plot.style.left = (position.x + 180) + 'px';
-                plot.style.top = (position.y + 320) +'px';
+                plot.style.left = (position.x + 320) + 'px';
+                plot.style.top = (position.y + 320) + 'px';
                 
                 mapBackground.appendChild(plot);
             });
